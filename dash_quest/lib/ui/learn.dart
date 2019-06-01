@@ -4,7 +4,7 @@ import 'package:dime/dime.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../main.dart';
+import 'articles.dart';
 
 class LearnPage extends StatelessWidget {
   @override
@@ -46,32 +46,33 @@ class _LearnState extends State<Learn> {
           padding: const EdgeInsets.all(10.0),
           child: Text("Learn"),
         ),
-        MaterialButton(
-          onPressed: () {
-            Navigator.push(
-                context, MaterialPageRoute(builder: (ctx) => DashQuestPage()));
-          },
-          child: Expanded(
-            child: ListView.builder(
-              itemCount: articles.length,
-              itemBuilder: (ctx, i) {
-                var article = articles[i];
-                var icon = Icons.event_note;
-                if (article.type == ArticleType.URL) {
-                  icon = Icons.link;
-                } else if (article.type == ArticleType.VIDEO) {
-                  icon = Icons.play_arrow;
-                }
-                return ListTile(
+        Expanded(
+          child: ListView.builder(
+            itemCount: articles.length,
+            itemBuilder: (ctx, i) {
+              var article = articles[i];
+              var icon = Icons.event_note;
+              if (article.type == ArticleType.URL) {
+                icon = Icons.link;
+              } else if (article.type == ArticleType.VIDEO) {
+                icon = Icons.play_arrow;
+              }
+              return MaterialButton(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(
+                          builder: (ctx) => ArticlesPage(article)));
+                },
+                child: ListTile(
                   leading: Icon(icon),
                   title: Text(article.title),
                   subtitle: Text(
                     article.abstract,
                     style: TextStyle(color: Colors.blue),
                   ),
-                );
-              },
-            ),
+                ),
+              );
+            },
           ),
         ),
       ],
