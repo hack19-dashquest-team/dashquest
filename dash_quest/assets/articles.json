@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "id": "d1",
+      "title": "How to use Git.",
+      "abstract": "This tutorial shows you how to use git with command line",
+      "originalUrl": "https://guides.github.com/activities/hello-world/",
+      "type": "URL",
+      "tags": [
+        "git",
+        "tool",
+        "beginner"
+      ]
+    },
+    {
+      "id": "d1",
+      "title": "How to build a Gradient?",
+      "abstract": "Article explains how to use Gradient in Flutter.",
+      "originalUrl": "https://flutterbyexample.com/gradients-background/",
+      "type": "URL",
+      "tags": [
+        "flutter",
+        "ui",
+        "design"
+      ]
+    }
+  ]
+}

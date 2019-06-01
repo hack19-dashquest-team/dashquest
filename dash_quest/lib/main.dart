@@ -1,6 +1,17 @@
+import 'package:dash_quest/di.dart';
+import 'package:dash_quest/ui/data_test_page.dart';
+import 'package:dime/dime.dart';
+import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_fimber/flutter_fimber.dart';
+import 'package:path_provider/path_provider.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  Fimber.plantTree(FimberTree());
+  var dbPath = (await getApplicationDocumentsDirectory()).path;
+  Dime.installModule(DemoModule(dbPath));
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -91,6 +102,13 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            FlatButton(
+              child: Text("Test data"),
+              onPressed: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (ctx) => DataTestPage()));
+              },
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
