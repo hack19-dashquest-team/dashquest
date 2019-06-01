@@ -14,7 +14,7 @@ class Learn extends StatelessWidget {
               ListTile(
                 leading: Icon(Icons.map),
                 title: Text('Learn to Build a Gradient Background'),
-                sub Text('UI'),
+                subtitle: Text('UI', style: TextStyle(color: Colors.blue),
               ),
             ],
           ),
