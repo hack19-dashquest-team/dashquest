@@ -32,11 +32,16 @@ class MockQuestionService extends QuestionService {
   }
 
   @override
-  Future recordAnswer(String questionId, AnswerItem answer) async {
+  Future recordAnswer(Question question, AnswerItem answer) async {
     responses.add(QuestionResponse()
-      ..questionId = questionId
+      ..question = question
       ..answerItem = answer
       ..answerTime = DateTime.now());
     return null;
+  }
+
+  @override
+  Future<List<QuestionResponse>> getResponses() {
+    return Future.value(responses);
   }
 }

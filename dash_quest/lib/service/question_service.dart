@@ -8,5 +8,7 @@ abstract class QuestionService {
   /// Set `notAnswered` to null to get all.
   Future<List<Question>> fetchAllQuestions({bool notAnswered = true});
 
-  Future recordAnswer(String questionId, AnswerItem answer);
+  Future recordAnswer(Question question, AnswerItem answer);
+
+  Future<List<QuestionResponse>> getResponses();
 }

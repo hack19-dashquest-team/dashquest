@@ -6,26 +6,6 @@ part of 'question.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-QuestionResponse _$QuestionResponseFromJson(Map<String, dynamic> json) {
-  return QuestionResponse()
-    ..questionId = json['questionId'] as String
-    ..isCorrect = json['isCorrect'] as bool
-    ..answerItem = json['answerItem'] == null
-        ? null
-        : AnswerItem.fromJson(json['answerItem'] as Map<String, dynamic>)
-    ..answerTime = json['answerTime'] == null
-        ? null
-        : DateTime.parse(json['answerTime'] as String);
-}
-
-Map<String, dynamic> _$QuestionResponseToJson(QuestionResponse instance) =>
-    <String, dynamic>{
-      'questionId': instance.questionId,
-      'isCorrect': instance.isCorrect,
-      'answerItem': instance.answerItem,
-      'answerTime': instance.answerTime?.toIso8601String()
-    };
-
 Question _$QuestionFromJson(Map<String, dynamic> json) {
   return Question()
     ..id = json['id'] as String
