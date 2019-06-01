@@ -5,8 +5,8 @@ import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_fimber/flutter_fimber.dart';
 import 'package:path_provider/path_provider.dart';
+
 import 'ui/Quiz.dart';
-import 'ui/learn.dart';
 
 void main() async {
   Fimber.plantTree(FimberTree());
@@ -104,6 +104,15 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            FlatButton(
+              child: Text("QUIZ"),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Quiz()),
+                );
+              },
+            ),
             FlatButton(
               child: Text("Test data"),
               onPressed: () {
