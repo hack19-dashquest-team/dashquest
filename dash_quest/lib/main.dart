@@ -1,5 +1,4 @@
 import 'package:dash_quest/di.dart';
-import 'package:dash_quest/ui/learn.dart';
 import 'package:dash_quest/ui/question_page.dart';
 import 'package:dime/dime.dart';
 import 'package:fimber/fimber.dart';
@@ -53,13 +52,6 @@ class DashQuestPage extends StatelessWidget {
                   MaterialPageRoute(
                       builder: (context) => InitialQuestionsPage()),
                 );
-              },
-            ),
-            FlatButton(
-              child: Text("Test BUTTON - remove this button"),
-              onPressed: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (ctx) => LearnPage()));
               },
             ),
           ],
