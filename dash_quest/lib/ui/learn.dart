@@ -12,11 +12,22 @@ class Learn extends StatelessWidget {
           child: ListView(
             children: <Widget>[
               ListTile(
-                leading: Icon(Icons.map),
+                leading: Icon(Icons.play_arrow),
                 title: Text('Learn to Build a Gradient Background'),
                 subtitle: Text('UI', style: TextStyle(color: Colors.blue),
-              ),
+              ),),
+              ListTile(
+                leading: Icon(Icons.pages),
+                title: Text('Build a Basic UI from Scratch'),
+                subtitle: Text('UI', style: TextStyle(color: Colors.blue),
+              ),),
+              ListTile(
+                leading: Icon(Icons.gif),
+                title: Text('UI Basics'),
+                subtitle: Text('UI', style: TextStyle(color: Colors.blue),
+              ),),
             ],
+          
           ),
         ),
       ],
