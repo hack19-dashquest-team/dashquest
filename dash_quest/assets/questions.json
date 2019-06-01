@@ -1,0 +1,47 @@
+{
+  "questions": [
+    {
+      "id": "1",
+      "question": "What is Dart?",
+      "correctAnswer": "a1",
+      "tag": [
+        "language",
+        "oop"
+      ],
+      "answers": [
+        {
+          "id": "a1",
+          "data": "Language",
+          "type": "text"
+        },
+        {
+          "id": "a2",
+          "data": "Missile",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "question": "How to build a Gradient?",
+      "correctAnswer": "a1",
+      "tag": [
+        "flutter",
+        "ui",
+        "draw"
+      ],
+      "answers": [
+        {
+          "id": "a1",
+          "data": "Use BoxDecoration, gradient property.",
+          "type": "text"
+        },
+        {
+          "id": "a2",
+          "data": "Use GradientBox",
+          "type": "text"
+        }
+      ]
+    }
+  ]
+}
