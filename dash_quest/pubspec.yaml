@@ -19,7 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_fimber:
+  fimber:
   dime:
   path_provider:
   shared_preferences:

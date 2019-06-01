@@ -3,14 +3,13 @@ import 'package:dash_quest/ui/data_test_page.dart';
 import 'package:dime/dime.dart';
 import 'package:fimber/fimber.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_fimber/flutter_fimber.dart';
 import 'package:path_provider/path_provider.dart';
 
 // import 'ui/Quiz.dart';
 import 'ui/Survey.dart';
 
 void main() async {
-  Fimber.plantTree(FimberTree());
+  Fimber.plantTree(DebugTree());
   var dbPath = (await getApplicationDocumentsDirectory()).path;
   Dime.installModule(DemoModule(dbPath));
   runApp(MyApp());
