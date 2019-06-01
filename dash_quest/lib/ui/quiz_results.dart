@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 // Uncomment lines 7 and 10 to view the visual layout at runtime.
 // import 'package:flutter/rendering.dart' show debugPaintSizeEnabled;
 
+import 'learn.dart';
+
 void main() {
   // debugPaintSizeEnabled = true;
-  runApp(Survey());
+  runApp(Results());
 }
 
-class Survey extends StatelessWidget {
+class Results extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget titleSection = Container(
@@ -23,17 +25,28 @@ class Survey extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.only(bottom: 8),
                   child: Text(
-                    'Survey',
+                    'Drumroll please...',
                     style: TextStyle(
-                      fontWeight: FontWeight.bold,
+                      color: Colors.grey[500],
                     ),
                   ),
                 ),
                 Text(
-                  'Whatsupcoders YouTube',
+                  'YOU ARE A PADAWAN!!',
                   style: TextStyle(
                     color: Colors.grey[500],
+                    fontWeight: FontWeight.bold,
+                    fontSize: 72.0
                   ),
+                ),
+                FlatButton(
+                  child: Text("Time to level up to become a master"),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => Learn()),
+                    );
+                  },
                 ),
               ],
             ),
@@ -42,18 +55,6 @@ class Survey extends StatelessWidget {
       ),
     );
 
-    Color color = Theme.of(context).primaryColor;
-
-    Widget buttonSection = Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          _buildButtonColumn(color, Icons.check_box_outline_blank, 'UI'),
-          _buildButtonColumn(color, Icons.check_box_outline_blank, 'DART'),
-          _buildButtonColumn(color, Icons.check_box_outline_blank, 'OOP'),
-        ],
-      ),
-    );
 
     Widget textSection = Container(
       padding: const EdgeInsets.all(32),
@@ -73,13 +74,12 @@ class Survey extends StatelessWidget {
           children: [
             Image.asset(
               //change me
-              'images/end_survey.png',
+              'images/jedi_blue.png',
               width: 600,
               height: 240,
               fit: BoxFit.cover,
             ),
             titleSection,
-            buttonSection,
             textSection,
           ],
         ),
