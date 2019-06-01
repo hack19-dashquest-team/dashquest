@@ -6,7 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_fimber/flutter_fimber.dart';
 import 'package:path_provider/path_provider.dart';
 
-import 'ui/Quiz.dart';
+// import 'ui/Quiz.dart';
+import 'ui/Survey.dart';
 
 void main() async {
   Fimber.plantTree(FimberTree());
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Quiz()),
+                  MaterialPageRoute(builder: (context) => Survey()),
                 );
               },
             ),
