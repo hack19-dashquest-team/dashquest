@@ -30,21 +30,26 @@ class ResultsPage extends StatelessWidget {
               itemCount: results.length,
               itemBuilder: (ctx, i) {
                 var response = results[i];
-                return Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Text(
-                      "${response.question}",
-                      style: Theme
-                          .of(context)
-                          .textTheme
-                          .caption,
-                    ),
-                    (response.answerItem.id ==
-                        response.question.correctAnswerId)
-                        ? Icon(Icons.check_circle)
-                        : Icon(Icons.remove_circle_outline),
-                  ],
+                return Container(
+                  height: 80,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      Text(
+                        "${response.question.question}",
+                        style: Theme
+                            .of(context)
+                            .textTheme
+                            .title,
+                      ),
+                      SizedBox(width: 100, child:
+                      (response.answerItem.id ==
+                          response.question.correctAnswerId)
+                          ? Icon(Icons.check_circle)
+                          : Icon(Icons.remove_circle_outline),
+                      ),
+                    ],
+                  ),
                 );
               },
             ),
