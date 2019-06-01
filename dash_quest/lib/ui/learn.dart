@@ -1,4 +1,6 @@
+import 'package:dash_quest/ui/articles.dart';
 import 'package:flutter/material.dart';
+import 'ui/articles.dart';
 
 class Learn extends StatelessWidget {
    @override
@@ -11,21 +13,30 @@ class Learn extends StatelessWidget {
         Expanded(
           child: ListView(
             children: <Widget>[
-              ListTile(
+              MaterialButton(
+              child: ListTile(
                 leading: Icon(Icons.play_arrow),
                 title: Text('Learn to Build a Gradient Background'),
                 subtitle: Text('UI', style: TextStyle(color: Colors.blue),
-              ),),
-              ListTile(
+              ),), onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Articles()),);
+              },),
+              MaterialButton(
+              child: ListTile(
                 leading: Icon(Icons.pages),
                 title: Text('Build a Basic UI from Scratch'),
                 subtitle: Text('UI', style: TextStyle(color: Colors.blue),
-              ),),
-              ListTile(
+              ),), onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => Articles()),);
+              },),
+              MaterialButton(
+              child: ListTile(
                 leading: Icon(Icons.gif),
                 title: Text('UI Basics'),
                 subtitle: Text('UI', style: TextStyle(color: Colors.blue),
-              ),),
+              ),), onPressed: () {
+Navigator.push(context, MaterialPageRoute(builder: (context) => Articles()),);
+              },),
             ],
           
           ),

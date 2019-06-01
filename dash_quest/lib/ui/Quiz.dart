@@ -45,6 +45,7 @@ class Quiz extends StatelessWidget {
               child: const Text('Results'),
               onPressed: () {
 //Route to results page
+//Navigator.push(context, MaterialPageRoute(builder: (context) => Quiz()),);
               },
             )),
       ],

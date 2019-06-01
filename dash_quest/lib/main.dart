@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/Quiz.dart';
 import 'ui/learn.dart';
+import 'ui/articles.dart';
 
 void main() => runApp(MyApp());
 
