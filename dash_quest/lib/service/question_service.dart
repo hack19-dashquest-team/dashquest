@@ -11,4 +11,6 @@ abstract class QuestionService {
   Future recordAnswer(Question question, AnswerItem answer);
 
   Future<List<QuestionResponse>> getResponses();
+
+  void clearResponses();
 }

@@ -44,4 +44,9 @@ class MockQuestionService extends QuestionService {
   Future<List<QuestionResponse>> getResponses() {
     return Future.value(responses);
   }
+
+  @override
+  void clearResponses() {
+    responses.clear();
+  }
 }

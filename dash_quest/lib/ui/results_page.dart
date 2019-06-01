@@ -23,26 +23,30 @@ class ResultsPage extends StatelessWidget {
               style: Theme.of(context).textTheme.display1,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Expanded(
-              child: ListView.builder(
-                  itemCount: results.length,
-                  itemBuilder: (ctx, i) {
-                    var response = results[i];
-                    return Row(
-                      children: <Widget>[
-                        Text(
-                          "${response.question}",
-                          style: Theme.of(context).textTheme.caption,
-                        ),
-                        (response.answerItem.id ==
-                                response.question.correctAnswerId)
-                            ? Icon(Icons.check_circle)
-                            : Icon(Icons.remove_circle_outline),
-                      ],
-                    );
-                  }),
+          Expanded(
+            child: results.length == 0
+                ? Text("Empty")
+                : ListView.builder(
+              itemCount: results.length,
+              itemBuilder: (ctx, i) {
+                var response = results[i];
+                return Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text(
+                      "${response.question}",
+                      style: Theme
+                          .of(context)
+                          .textTheme
+                          .caption,
+                    ),
+                    (response.answerItem.id ==
+                        response.question.correctAnswerId)
+                        ? Icon(Icons.check_circle)
+                        : Icon(Icons.remove_circle_outline),
+                  ],
+                );
+              },
             ),
           ),
           Center(
@@ -53,7 +57,7 @@ class ResultsPage extends StatelessWidget {
                     context, MaterialPageRoute(builder: (c) => LearnPage()));
               },
             ),
-          )
+          ),
         ],
       ),
     );
