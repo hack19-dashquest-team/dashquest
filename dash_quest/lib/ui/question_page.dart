@@ -21,6 +21,7 @@ class _InitialQuestionsPageState extends State<InitialQuestionsPage> {
   void initState() {
     super.initState();
     questionService = Dime.inject();
+    questionService.clearResponses();
     questionService.fetchAllQuestions().then((lst) {
       setState(() {
         allQuestions = lst;
