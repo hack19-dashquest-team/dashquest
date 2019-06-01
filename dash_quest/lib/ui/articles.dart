@@ -29,12 +29,14 @@ class Articles extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: Text("Learning Material"),
         ),
-        Image.asset(
-          //change me
-          'images/end_survey.png',
-          width: 600,
-          height: 240,
-          fit: BoxFit.cover,
+        Expanded(
+          child: Image.asset(
+            //change me
+            'images/end_survey.png',
+            width: 600,
+            height: 240,
+            fit: BoxFit.cover,
+          ),
         ),
         // Expanded(
         //  child: WebView(
