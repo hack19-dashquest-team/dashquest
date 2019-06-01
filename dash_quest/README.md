@@ -1,6 +1,6 @@
 # dash_quest
 
-A new Flutter project to rule middle earth.
+A new Flutter project to rule middle earth and the universe.
 
 ## Getting Started
 
