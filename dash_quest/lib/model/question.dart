@@ -2,19 +2,14 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'question.g.dart';
 
-@JsonSerializable()
 class QuestionResponse {
-  String questionId;
+  Question question;
   bool isCorrect;
   AnswerItem answerItem;
   DateTime answerTime;
 
   QuestionResponse();
 
-  Map<String, dynamic> toJson() => _$QuestionResponseToJson(this);
-
-  factory QuestionResponse.fromJson(Map<String, dynamic> json) =>
-      _$QuestionResponseFromJson(json);
 }
 
 @JsonSerializable()

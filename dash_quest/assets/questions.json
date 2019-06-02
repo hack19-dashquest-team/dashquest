@@ -42,6 +42,38 @@
           "type": "text"
         }
       ]
+    },
+    {
+      "id": "q3",
+      "question": "How to build a ListView?",
+      "correctAnswer": "a1",
+      "tag": [
+        "flutter",
+        "ui",
+        "draw"
+      ],
+      "answers": [
+        {
+          "id": "a1",
+          "data": "Use ListView constructor",
+          "type": "text"
+        },
+        {
+          "id": "a2",
+          "data": "Use ListView.build()",
+          "type": "text"
+        },
+        {
+          "id": "a3",
+          "data": "Use Column with items",
+          "type": "text"
+        },
+        {
+          "id": "a4",
+          "data": "Use ScrollView with Items",
+          "type": "text"
+        }
+      ]
     }
   ]
 }
